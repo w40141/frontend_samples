@@ -1,24 +1,29 @@
 {
-  "env": {
-    "es2021": true,
-    "browser": true
-  },
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "root": true,
   "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:react/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "overrides": [],
   "parserOptions": {
+    "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json",
-    "ecmaVersion": "latest"
-  },
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "@typescript-eslint/no-explicit-any": 1,
-    "@typescript-eslint/no-non-null-assertion": 1
+    "project": "./tsconfig.eslint.json"
   },
   "rules": {
-    "no-console": "error",
-    "camelcase": ["error", { "properties": "never" }],
-    "semi": ["error", "always"]
-  },
-  "root": true
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/quotes": ["error", "double"],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
+  }
 }
