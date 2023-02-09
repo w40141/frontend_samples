@@ -2,15 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from "./App";
-import Hello from "./components/Hello";
+// import Hello from "./components/Hello";
 import reportWebVitals from "./reportWebVitals";
+// import { Parent } from "./components/Parent";
+// import { Parent } from "./components/UseCallbackSample";
+// import { UseMemoSample } from "./components/UseMemoSample";
+import { Clock } from "./components/Clock";
+import {Input} from './components/Input'
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement,
 );
 root.render(
 	<React.StrictMode>
-		<Hello />
+    <Input />
 	</React.StrictMode>,
 );
 
